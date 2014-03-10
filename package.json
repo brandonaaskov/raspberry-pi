@@ -1,0 +1,25 @@
+{
+  "name": "raspberry-pi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "blink.js",
+  "dependencies": {
+    "pi-gpio": "~0.0.2",
+    "cylon-raspi": "^0.6.1",
+    "cylon": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonaaskov/raspberry-pi.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonaaskov/raspberry-pi/issues"
+  },
+  "homepage": "https://github.com/brandonaaskov/raspberry-pi"
+}
