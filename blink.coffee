@@ -1,4 +1,4 @@
-gpio = require("gpio")
+gpio = require("pi-gpio")
 
 gpio.open 11, "output", (error, value) ->
   console.log "open", value
