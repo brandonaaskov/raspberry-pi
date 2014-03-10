@@ -1,13 +1,7 @@
-Cylon = require('cylon')
+gpio = require("gpio")
 
-Cylon.robot
-  connection:
-    name: 'raspi', adaptor: 'raspi'
+gpio.open 11, "output", (error, value) ->
+  console.log Â"open", value
 
-  device:
-    name: 'led', driver: 'led', pin: 11
-
-  work: (my) ->
-    every 1.second(), -> my.led.toggle()
-
-.start()
+  gpio.write 11, 1, (writeError, writeValue) ->
+    console.log "write", writeValue
