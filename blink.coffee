@@ -1,11 +1,8 @@
 gpio = require("pi-gpio")
 
-gpio.open 11, "output", (error, value) ->
-  console.log "open", value
+ledOn = true
 
-  gpio.write 11, 1, (writeError, writeValue) ->
-    console.log "write", writeValue
-
-  setTimeout ->
-    gpio.close 11
-  , 2000
+setInterval ->
+  gpio.write 11, if ledOn then 0 else 1
+  ledOn = if ledOn then false else true
+, 2000
