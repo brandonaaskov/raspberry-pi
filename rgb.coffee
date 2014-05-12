@@ -1,11 +1,8 @@
 gpio = require("pi-gpio")
 
-ledOn = true
+led =
+  red: 11
+  green: 13
+  blue: 15
 
-setInterval ->
-  gpio.open 17, "output", (err, value) ->
-    gpio.write 17, (if ledOn then 0 else 1), (writeErr, writeValue) ->
-      console.log "Blink!" unless ledOn is 0
-      ledOn = if ledOn then false else true
-      gpio.close 17
-, 1000
+gpio.open led.red, "output", (err, value) -> gpio.write led.red, 1
