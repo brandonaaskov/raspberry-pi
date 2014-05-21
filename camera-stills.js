@@ -6,7 +6,7 @@
 
   options = {
     mode: 'photo',
-    output: '/dev/pictures/pic_%d.png',
+    output: 'stills/pic_%d.png',
     w: 1280,
     h: 720,
     e: 'png',
