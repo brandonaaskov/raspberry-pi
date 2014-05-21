@@ -3,9 +3,10 @@ RaspiCam = require 'raspicam'
 options =
   mode: 'photo'
   output: '/tmp/pictures/pic_%d.png'
-  encoding: 'png' # jpg, bmp, gif, png
-  timeout: '2000' # in ms
-  timelapse: false
+  e: 'png' # encoding: jpg, bmp, gif, png
+#  q: # quality (integer or string) set jpeg quality
+  t: '2000' # timeout (in ms)
+  tl: false # timelapse
 
 camera = new RaspiCam options
 

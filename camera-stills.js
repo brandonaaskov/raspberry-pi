@@ -6,9 +6,9 @@ RaspiCam = require('raspicam');
 options = {
   mode: 'photo',
   output: '/tmp/pictures/pic_%d.png',
-  encoding: 'png',
-  timeout: '2000',
-  timelapse: false
+  e: 'png',
+  t: '2000',
+  tl: false
 };
 
 camera = new RaspiCam(options);
