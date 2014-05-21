@@ -5,7 +5,7 @@ RaspiCam = require('raspicam');
 
 options = {
   mode: 'photo',
-  output: '/dev/root/pictures/pic_%d.png',
+  output: '/dev/pictures/pic_%d.png',
   w: 1280,
   h: 720,
   e: 'png',
