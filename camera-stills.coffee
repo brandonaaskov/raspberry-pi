@@ -2,7 +2,9 @@ RaspiCam = require 'raspicam'
 
 options =
   mode: 'photo'
-  output: '/tmp/pictures/pic_%d.png'
+  output: 'stills/pic_%d.png'
+  w: 1280
+  h: 720
   e: 'png' # encoding: jpg, bmp, gif, png
 #  q: # quality (integer or string) set jpeg quality
   t: '2000' # timeout (in ms)
