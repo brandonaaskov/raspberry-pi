@@ -2,7 +2,7 @@ RaspiCam = require 'raspicam'
 
 options =
   mode: 'photo'
-  output: 'stills/pic_%d.png'
+  output: '/media/pictures/still_%d.png'
   w: 1280
   h: 720
   e: 'png' # encoding: jpg, bmp, gif, png
