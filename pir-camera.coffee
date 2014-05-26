@@ -22,7 +22,7 @@ takePicture = ->
 
 readInterval = ->
   gpio.read pin, (error, value) ->
-    return unless value isnt pirTripped
+    return if value is pirTripped
     pirTripped = value
     if pirTripped then takePicture()
     else console.log('waiting...')
