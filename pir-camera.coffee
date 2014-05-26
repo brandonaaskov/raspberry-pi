@@ -27,7 +27,6 @@ readInterval = ->
     if pirTripped then takePicture()
     else console.log 'waiting...'
 
-
 onSetup = (error) ->
   if error then console.error(error)
   setInterval readInterval, pirReadIntervalTime
