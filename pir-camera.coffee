@@ -1,5 +1,5 @@
 #!/usr/local/bin/ node
-gpio = require("rpi-gpio")
+gpio = require 'rpi-gpio'
 RaspiCam = require 'raspicam'
 
 pin = 7
@@ -17,7 +17,7 @@ takePicture = ->
     t: '2000' # timeout (in ms)
     tl: false # timelapse
 
-  camera = new RaspiCam cameraOptions
+  camera = new RaspiCam(cameraOptions)
   camera.start()
 
 readInterval = ->
@@ -25,11 +25,11 @@ readInterval = ->
     return unless value isnt pirTripped
     pirTripped = value
     if pirTripped then takePicture()
-    else console.log 'waiting...'
+    else console.log('waiting...')
 
 onSetup = (error) ->
   if error then console.error(error)
-  setInterval readInterval, pirReadIntervalTime
+  setInterval(readInterval, pirReadIntervalTime)
 
-gpio.setMode gpio.MODE_RPI
-gpio.setup pin, gpio.DIR_IN, onSetup
+gpio.setMode(gpio.MODE_RPI)
+gpio.setup(pin, gpio.DIR_IN, onSetup)
